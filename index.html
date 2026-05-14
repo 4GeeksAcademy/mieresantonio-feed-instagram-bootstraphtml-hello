@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Feed - 4Geeks Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <style>
+        body { background-color: #ffffff; }
+        .navbar { border-bottom: 1px solid #ffffff; background-color: rgb(255, 255, 255) !important; }
+        .nav-pills .nav-link { color: #7ebbb4; border-radius: 0; }
+        .nav-pills .nav-link.active { background-color: transparent; color: #1565dd; border-bottom: 2px solid #286fd9; }
+        .gallery-img { height: 30vw; object-fit: cover; width: 100%; border: 1px solid #cdc7d8; }
+        .insta-card { border: 1px solid #7aa296; background: rgb(252, 252, 252); max-width: 600px; margin: 30px auto; }
+        .card-header-custom { padding: 12px 15px; display: flex; justify-content: space-between; align-items: center; }
+        .card-img-custom { width: 100%; height: auto; display: block; }
+        .card-body-custom { padding: 15px; }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-light sticky-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <i class="fa-brands fa-instagram fa-xl"></i>
+                <span class="fs-5 fw-bold ms-1">Feed Instagram</span>
+            </div>
+            <div class="d-flex align-items-center">
+                <button class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#newPostModal">Crear una nueva publicacion</button>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Perfil</a></li>
+                        <li><a class="dropdown-item" href="#">Privacidad y Datos</a></li>
+                        <li><a class="dropdown-item" href="#">Accecibilidad</a></li>
+                        <li><a class="dropdown-item" href="#">Configuracion</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="#">Cerrar Sesion</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="modal fade" id="newPostModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Crear nueva publicacion</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="fw-bold mb-1">Subtitulo:</p>
+                    <textarea class="form-control mb-2" rows="3" placeholder="Write your thoughts..."></textarea>
+                    <button class="btn btn-light border btn-sm"><i class="fa-solid fa-camera"></i></button>
+                    <button class="btn btn-light border btn-sm"><i class="fa-solid fa-location-dot"></i></button>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button class="btn btn-success">Publicar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <ul class="nav nav-pills justify-content-center mb-4" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#pills-grid" type="button">
+                    <i class="fa-solid fa-table-cells fa-lg"></i>
+                </button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-list" type="button">
+                    <i class="fa-solid fa-square fa-lg"></i>
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="pills-grid">
+                <div class="row g-1">
+                    <div class="col-4"><img src="https://picsum.photos/id/12/500/500" class="gallery-img"></div>
+                    <div class="col-4"><img src="https://picsum.photos/id/20/500/500" class="gallery-img"></div>
+                    <div class="col-4"><img src="https://picsum.photos/id/26/500/500" class="gallery-img"></div>
+                    <div class="col-4"><img src="https://picsum.photos/id/30/500/500" class="gallery-img"></div>
+                    <div class="col-4"><img src="https://picsum.photos/id/48/500/500" class="gallery-img"></div>
+                    <div class="col-4"><img src="https://picsum.photos/id/56/500/500" class="gallery-img"></div>
+                    <div class="col-4"><img src="https://picsum.photos/id/60/500/500" class="gallery-img"></div>
+                    <div class="col-4"><img src="https://picsum.photos/id/75/500/500" class="gallery-img"></div>
+                    <div class="col-4"><img src="https://picsum.photos/id/84/500/500" class="gallery-img"></div>
+                    <div class="col-4"><img src="https://picsum.photos/id/96/500/500" class="gallery-img"></div>
+                    <div class="col-4"><img src="https://picsum.photos/id/102/500/500" class="gallery-img"></div>
+                    <div class="col-4"><img src="https://picsum.photos/id/111/500/500" class="gallery-img"></div>
+                </div>
+            </div>
+             <!-- Este el POST UNO -->
+            <div class="tab-pane fade" id="pills-list">
+                <article class="insta-card rounded">
+                    <div class="card-header-custom">
+                        <h5 class="mb-0 fw-bold">Bonita Imagen</h5>
+                        <small class="text-muted">05/26</small>
+                    </div>
+                    <img src="https://picsum.photos/id/12/800/600" class="card-img-custom">
+                    <div class="card-body-custom">
+                        <p class="fw-bold mb-1">1,400,000 Likes</p>
+                        <p>Que bello. #bonito #visual</p>
+                    </div>
+                </article>
+
+                <!-- Este el POST DOS -->
+                <article class="insta-card rounded">
+                    <div class="card-header-custom">
+                        <h5 class="mb-0 fw-bold">Flujo de trabajo</h5>
+                        <small class="text-muted">04/12</small>
+                    </div>
+                    <img src="https://picsum.photos/id/20/800/600" class="card-img-custom">
+                    <div class="card-body-custom">
+                        <p class="fw-bold mb-1">950.000 Likes</p>
+                        <p>Que bello x2. #Codigo #Trabajo</p>
+                    </div>
+                </article>
+
+                <!-- Este el POST TRES -->
+                <article class="insta-card rounded">
+                    <div class="card-header-custom">
+                        <h5 class="mb-0 fw-bold">Buena Toma</h5>
+                        <small class="text-muted">03/10</small>
+                    </div>
+                    <img src="https://picsum.photos/id/26/800/600" class="card-img-custom">
+                    <div class="card-body-custom">
+                        <p class="fw-bold mb-1">2,100,000 Likes</p>
+                        <p>Que bello x3. #Detalle #Muchosvistos</p>
+                    </div>
+                </article>
+
+                <!-- Este el POST CUATRO -->
+                <article class="insta-card rounded">
+                    <div class="card-header-custom">
+                        <h5 class="mb-0 fw-bold">Hora Alegre</h5>
+                        <small class="text-muted">02/15</small>
+                    </div>
+                    <img src="https://picsum.photos/id/30/800/600" class="card-img-custom">
+                    <div class="card-body-custom">
+                        <p class="fw-bold mb-1">3,200,000 Likes</p>
+                        <p>Que bello x4. #foto #luz</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
